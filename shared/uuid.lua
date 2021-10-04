@@ -1,5 +1,7 @@
+local isServer = IsDuplicityVersion()
+
 -----
-math.randomseed( os.time() )
+math.randomseed( isServer and os.time() or GetGameTimer() )
 math.random()
 -----
 local function num2bs(num)
